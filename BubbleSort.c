@@ -1,29 +1,26 @@
-#include <studio.h>
+#include <stdio.h>
 
 
 int main()
 {
-    bool swap;
-    int n=5,j;
+    int c, d, swap;
+    int n=5;
     int arr[5]={58,89,71,35,6};
     
-    
-    do{
-        swap=false;
-        for(j=0;j<n;j++)
-        {
-            if (arr[j]>arr[j-1]);
-            {
-                temp=arr[j];
-                arr[j]=arr[j+1];
-                arr[j+1]=temp
-                swap=false;
-            }
-        }
-    }while(swap);
-    
-    for(m=0;m<n;m--)
-        {
-            printf("%s ",arr[l]);
-        }
+  for (c = 0 ; c < n - 1; c++)
+  {
+    for (d = 0 ; d < n - c - 1; d++)
+    {
+      if (array[d] > array[d+1]) /* For decreasing order use '<' instead of '>' */
+      {
+        swap       = array[d];
+        array[d]   = array[d+1];
+        array[d+1] = swap;
+      }
+    }
+  }
+   for (c = 0; c < n; c++)
+     printf("%d\n", array[c]);
+
+  return 0;
 }
